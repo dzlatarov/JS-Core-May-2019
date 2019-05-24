@@ -1,7 +1,3 @@
-/**
- * 
- * @param {Array} matrix 
- */
 function solve(matrix){
     let sum = 0;
 
