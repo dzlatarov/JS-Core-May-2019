@@ -7,7 +7,7 @@ function solve() {
 
    let result = document.getElementById('result');
    let history = document.getElementById('history');
-
+   
    let firstPlayerSpanElement = result.children[0];
    let secondPlayerSpanElement = result.children[2];
 
