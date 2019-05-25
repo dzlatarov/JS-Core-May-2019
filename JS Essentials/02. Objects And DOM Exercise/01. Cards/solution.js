@@ -66,6 +66,3 @@ function solve() {
       }      
    }
 }
-
-
-function testCommit(){}
