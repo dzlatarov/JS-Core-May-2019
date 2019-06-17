@@ -1,3 +1,9 @@
 function notify(message) {
-    console.log('TODO:...');
+   let notificationDivElement = document.getElementById('notification');
+   notificationDivElement.textContent = message;
+   notificationDivElement.style.display = 'block';
+
+  setTimeout(() => {
+   notificationDivElement.style.display = 'none';
+  }, 2000);
 }
