@@ -9,6 +9,3 @@ class Rectangle {
            return this.width * this.height;
     }
 }
-
-const rectangle = new Rectangle(5, 10, 'red');
-console.log(rectangle.calcArea());
