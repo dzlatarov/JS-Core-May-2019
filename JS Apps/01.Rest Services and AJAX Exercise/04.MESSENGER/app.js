@@ -5,16 +5,16 @@ function attachEvents() {
     const url = 'https://rest-messanger.firebaseio.com/messanger.json';
 
     const sendBtn = document.getElementById('submit');
-    sendBtn.addEventListener('click',sendMessage);
+    sendBtn.addEventListener('click', sendMessage);
 
     const refreshBtn = document.getElementById('refresh');
-    refreshBtn.addEventListener('click',refreshMessages);
+    refreshBtn.addEventListener('click', refreshMessages);
 
     function sendMessage() {
         const author = inputAuthor.value;
         const content = inputContent.value;
 
-        if(author && content){
+        if (author && content) {
             const message = {
                 author,
                 content
@@ -23,9 +23,9 @@ function attachEvents() {
             messages.textContent += `${author}: ${content}\n`;
 
             fetch(url, {
-                method: 'post',
-                body: JSON.stringify(message)
-            })
+                    method: 'post',
+                    body: JSON.stringify(message)
+                })
                 .then(resolve => resolve.json());
         }
 
@@ -33,20 +33,20 @@ function attachEvents() {
         inputContent.value = '';
     }
 
-    function refreshMessages () {
+    function refreshMessages() {
         messages.textContent = '';
-        
+
         fetch(url)
             .then(request => request.json())
             .then(data => {
-            const currentMessages = Object.values(data);
+                const currentMessages = Object.values(data);
 
-            for(const message of currentMessages){
-                const author = message.author;
-                const content = message.content;
-                messages.textContent += `${author}: ${content}\n`;
-            }
-        });
+                for (const message of currentMessages) {
+                    const author = message.author;
+                    const content = message.content;
+                    messages.textContent += `${author}: ${content}\n`;
+                }
+            });
     }
 }
 
