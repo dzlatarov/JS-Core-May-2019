@@ -44,7 +44,7 @@ function attachEvents() {
                 for (const message of currentMessages) {
                     const author = message.author;
                     const content = message.content;
-                    messages.textContent += `${author}: ${content}\n`;
+                    messages.textContent += `${author}: ${content}\n`;                
                 }
             });
     }
