@@ -56,8 +56,7 @@ function attachEvents() {
 
         fetch(`https://fisher-game.firebaseio.com/catches/${catchId}.json`, headers)
             .then(handler)
-            .then((data) => {
-                console.log(data);
+            .then((data) => {                
                 elements.loadBtn.click();
             });
     }
