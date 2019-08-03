@@ -5,7 +5,9 @@
     "version": "1.0.0",
     "main": "pathToMain",
     "dependencies": {
-        "bootstrap": "^4.3.1",
-        "jquery": "^3.4.0"
+        "bootstrap": "^4.3.1",        
+        "jquery": "^3.4.0",
+        "sammy": "0.7.6",
+        "handlebars": "4.1.2"      
     }
 }
